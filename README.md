@@ -61,3 +61,5 @@ Attendees: 30
 How to use, download the files, and run it specfic to your needs. For example, if you want to make a room reservation. Download roomReservationForm.py and replace the str, email, and chromeDriver location and run the file. 
 
 For the postRequest, you must input the AM and PM, and instagram caption manually... I couldn't get emojis to work 💔
+
+The submit button is commented out, but if you feel confident enough that the code works to your intent, uncomment it out and it will auto submit. (room reservation)

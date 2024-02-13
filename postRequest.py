@@ -6,7 +6,8 @@ import time
 ######################################################################################################################################################################################################
 ######################################################################################################################################################################################################
 
-str = """Data Science Workshop Classification
+str = """
+Data Science Workshop Classification
 
 Date: Feb 13
 
@@ -19,9 +20,13 @@ Details: Rida will covering Classification. I’ll be going over the concept a
 Instagram Caption:  N/a
 
 Attendees: 30
-
 """
 
+myName = 'Tina Chi'
+
+myEmail = 'tinac.592@yahoo.com'
+
+path_to_chromedriver = '/Users/tina/Desktop/WiCSE/chromedriver'  # e.g., '/Users/tina/Desktop/chromedriver'
 ######################################################################################################################################################################################################
 ######################################################################################################################################################################################################
 ######################################################################################################################################################################################################
@@ -76,7 +81,7 @@ theTime = dictData['Time']
 location = dictData['Location']
 details = dictData["Details"]
 attendees = dictData['Attendees']
-instagramCaption = dictData['Instagram Caption']
+# instagramCaption = dictData['Instagram Caption']
 
 
 timeHour = 0
@@ -114,12 +119,12 @@ print("attendees: ",attendees)
 
 
 # Replace this with the actual path to your downloaded ChromeDriver
-path_to_chromedriver = '/Users/tina/Desktop/WiCSE/chromedriver'  # e.g., '/Users/tina/Desktop/chromedriver'
+
 web = webdriver.Chrome(executable_path=path_to_chromedriver)
 web.get('https://docs.google.com/forms/d/e/1FAIpQLSevalh5lbihgs04yfd-b4_2mGXSWsjVf3j0kyiqLVQUm5d5aQ/viewform')
 
 
-myEmail = 'tinac.592@yahoo.com'
+
 email = web.find_element('xpath', '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div[1]/input')
 email.send_keys(myEmail)
 
@@ -158,7 +163,7 @@ nextButton.click()
 #     PMButton.click()
 
 
-myName = 'Tina Chi'
+
 name = web.find_element('xpath','//*[@id="mG61Hd"]/div[2]/div/div[2]/div[3]/div/div/div[2]/div/div[1]/div/div[1]/input')
 name.send_keys(myName)
 
